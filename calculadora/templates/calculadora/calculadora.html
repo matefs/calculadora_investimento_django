@@ -42,6 +42,15 @@
                     <p class="text-sm text-gray-600">Valores utilizados no simulador de investimentos (referentes à data de última atualização - esses valores podem alterar de acordo com o mercado):</p>
                 </div>
                 <ul class="list-disc list-inside ml-8">
+                    <p>Valor Juros Acumulado: {{ valor_juros_acumulado }}</p>
+
+<form method="post" action="{}">
+    {% csrf_token %}
+    <input type="text" name="valor_input">
+    <button type="submit">Enviar</button>
+</form>
+
+
                     <li>Data da última atualização: 02/02/2022</li>
                     <li>Porcentagem de rentabilidade da Poupança: 0,50% a.m.</li>
                     <li>Porcentagem de rentabilidade do Tesouro Selic: 10,75% a.a.</li>
