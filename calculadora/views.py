@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import re
 
 def calcular_investimento(request):
+    valor_taxa_selic_ao_ano = 11
     valor_inicial = 10000
     porcentagem_rendimento_ao_ano = 11.5
     valor_rendimento_ao_ano = porcentagem_rendimento_ao_ano / 100
@@ -27,5 +28,6 @@ def calcular_investimento(request):
     contexto = {
         'valor_juros_acumulado': formata_dois_decimais_e_converte_para_float(valor_final),
         'valores_por_mes': lista_de_valores_por_mes,
+        'valor_taxa_selic_ao_ano':  valor_taxa_selic_ao_ano
     }
     return render(request, 'calculadora/calculadora.html', contexto)
