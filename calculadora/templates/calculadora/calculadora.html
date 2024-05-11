@@ -31,6 +31,7 @@
                 <h2 class="text-lg font-bold mb-4">Resultados:</h2>
                 <p>Em 2 anos você teria</p>
                 <p class="text-2xl font-semibold mb-4">R$ 14.519,57</p>
+<p class="text-2xl font-semibold mb-4" >Valor Juros Acumulado: {{ valor_juros_acumulado }}</p>
                 <p>Valor líquido com os impostos descontados</p>
                 <ul class="list-disc list-inside">
                     <li>Total investido: R$ 12.450,00</li>
@@ -41,7 +42,6 @@
                     <p class="text-sm text-gray-600">Valores utilizados no simulador de investimentos (referentes à data de última atualização - esses valores podem alterar de acordo com o mercado):</p>
                 </div>
                 <ul class="list-disc list-inside ml-8">
-                    <p>Valor Juros Acumulado: {{ valor_juros_acumulado }}</p>
 
 <form method="post" action="{}">
     {% csrf_token %}
