@@ -3,6 +3,14 @@ from django.http import HttpResponse
 import re
 
 def calcular_investimento(request):
+    if request.method == 'POST':
+        if hasattr(request, 'form'):  # If using a form class
+            form = request.form
+            print(form)
+        else:  # If not using a form class
+            valor_input = request.POST.get('valor_input')
+            print(valor_input , 'caiu no else')
+
     valor_taxa_selic_ao_ano = 11
     valor_inicial = 10000
     porcentagem_rendimento_ao_ano = 11.5
