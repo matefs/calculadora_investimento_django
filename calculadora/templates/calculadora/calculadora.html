@@ -11,7 +11,8 @@
         <div class="grid grid-cols-2 gap-4">
             <div>
                 <h2 class="text-lg font-bold mb-4">Para começar, qual valor você gostaria de investir?</h2>
-                <form>
+                <form method="post">
+                        {% csrf_token %}
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700" for="valor_inicial">R$</label>
                         <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="valor_inicial" name="valor_inicial">
@@ -30,8 +31,7 @@
             <div>
                 <h2 class="text-lg font-bold mb-4">Resultados:</h2>
                 <p>Em 2 anos você teria</p>
-                <p class="text-2xl font-semibold mb-4">R$ 14.519,57</p>
-                <p class="text-2xl font-semibold mb-4" >Valor Juros Acumulado: {{ valor_juros_acumulado }}</p>
+                <p class="text-2xl font-semibold mb-4">R$ {{ valor_juros_acumulado }}</p>
                 <p>Valor líquido com os impostos descontados</p>
                 <ul class="list-disc list-inside">
                     <li>Total investido: R$ 12.450,00</li>
@@ -42,12 +42,6 @@
                     <p class="text-sm text-gray-600">Valores utilizados no simulador de investimentos (referentes à data de última atualização - esses valores podem alterar de acordo com o mercado):</p>
                 </div>
                 <ul class="list-disc list-inside ml-8">
-
-<form method="post" action="">
-    {% csrf_token %}
-    <input type="text" name="valor_input">
-    <button type="submit">Enviar</button>
-</form>
                     <li>Data da última atualização: 02/02/2022</li>
                     <li>Porcentagem de rentabilidade da Poupança: 0,50% a.m.</li>
                     <li>Porcentagem de rentabilidade do Tesouro Selic hoje: {{valor_taxa_selic_ao_ano}}% a.a. </li>

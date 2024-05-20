@@ -8,8 +8,10 @@ def calcular_investimento(request):
             form = request.form
             print(form)
         else:  # If not using a form class
-            valor_input = request.POST.get('valor_input')
-            print(valor_input , 'caiu no else')
+            valor_inicial = request.POST.get('valor_inicial')
+            tempo_investimento = request.POST.get('tempo_investimento')
+            deposito_mensal =  request.POST.get('deposito_mensal')
+            print(tempo_investimento, 'caiu no else', '| valor inicial ', valor_inicial)
 
     valor_taxa_selic_ao_ano = 11
     valor_inicial = 10000
