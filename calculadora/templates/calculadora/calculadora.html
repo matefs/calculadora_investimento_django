@@ -15,22 +15,22 @@
                         {% csrf_token %}
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700" for="valor_inicial">R$</label>
-                        <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="valor_inicial" name="valor_inicial">
+                        <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="valor_inicial" name="valor_inicial" value="0">
                     </div>
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700" for="deposito_mensal">E por mês, quanto gostaria de depositar?</label>
-                        <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="deposito_mensal" name="deposito_mensal">
+                        <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="deposito_mensal" name="deposito_mensal" value="0">
                     </div>
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700" for="tempo_investimento">Quanto tempo deixaria seu dinheiro investido? (em meses) </label>
-                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="tempo_investimento" name="tempo_investimento">
+                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="tempo_investimento" name="tempo_investimento" value="0">
                     </div>
                     <button class="bg-indigo-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-600" type="submit">Calcular</button>
                 </form>
             </div>
             <div>
                 <h2 class="text-lg font-bold mb-4">Resultados:</h2>
-                <p>Em 2 anos você teria</p>
+                <p>Em {{ numeroDeMesesInvestido|default:0 }} meses você teria</p>
                 <p class="text-2xl font-semibold mb-4">R$ {{ valor_juros_acumulado }}</p>
                 <p>Valor líquido com os impostos descontados</p>
                 <ul class="list-disc list-inside">
