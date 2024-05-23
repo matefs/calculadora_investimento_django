@@ -36,5 +36,5 @@ Espero que esta calculadora seja útil para você! 😊
 
  
 ## O que está por vir: 
-- Todo:  calcular poupança por mês consultando api do governo: `https://api.bcb.gov.br/dados/serie/bcdata.sgs.25/dados?formato=json&dataInicial=01/05/2024&dataFinal=31/12/2024`
-- Todo: add dinamic chart: `https://jsfiddle.net/qahx2t3b/`
+- [ ] Todo:  calcular poupança por mês consultando api do governo: `https://api.bcb.gov.br/dados/serie/bcdata.sgs.25/dados?formato=json&dataInicial=01/05/2024&dataFinal=31/12/2024`
+- [ ] Todo: add dinamic chart: `https://jsfiddle.net/qahx2t3b/`
