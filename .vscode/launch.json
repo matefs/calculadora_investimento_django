@@ -1,0 +1,46 @@
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//     {
+//         "name": "Python Debugger: Django",
+//         "type": "debugpy",
+//         "request": "launch",
+//         "args": [
+//             "runserver"
+//         ],
+//         "django": true,
+//         "autoStartBrowser": false,
+//         "program": "/usr/bin/python3.9 ${workspaceFolder}/manage.py"  
+//     }
+
+//         // {
+//         //     "name": "Python Debugger: Django",
+//         //     "type": "debugpy",
+//         //     "request": "launch",
+//         //     "args": [
+//         //         "runserver"
+//         //     ],
+//         //     "django": true,
+//         //     "autoStartBrowser": false,
+//         //     "program": "${workspaceFolder}/manage.py"
+            
+//         // }
+//     ]
+// }
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Debugger: Django",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/manage.py",
+      "args": [
+        "runserver"
+      ],
+      "django": true,
+      "autoStartBrowser": false
+    }
+  ]
+}
