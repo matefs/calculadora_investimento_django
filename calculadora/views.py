@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import re
+from .Utils.return_brazilian_selic_rate_from_api import return_selic_rate_from_last_month
+
+
 
 def calcular_investimento(request):
     numeroDeMesesInvestido = None
@@ -49,6 +52,7 @@ def calcular_investimento(request):
         'valor_rendimento_ao_mes': valor_rendimento_ao_mes,
         'valor_juros_acumulado': formata_dois_decimais_e_converte_para_float(valor_final),
         'valores_por_mes': lista_de_valores_por_mes,
-        'numeroDeMesesInvestido' : numeroDeMesesInvestido
+        'numeroDeMesesInvestido' : numeroDeMesesInvestido,
+        'taxaSelic' : return_selic_rate_from_last_month
     }
     return render(request, 'calculadora/calculadora.html', contexto)
