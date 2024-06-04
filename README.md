@@ -28,6 +28,9 @@ Este repositório contém uma aplicação web desenvolvida em Django para calcul
     
 4. Acesse a aplicação no navegador em **`http://localhost:8000`**.
 
+## Testes: 
+- A importação usando pytest não funciona uma vez existe um `__ini__` 
+
 ### Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
