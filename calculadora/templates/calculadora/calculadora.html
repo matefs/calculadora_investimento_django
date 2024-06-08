@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Investimento</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 </head>
 <body class="flex justify-center items-center h-screen bg-gray-100">
     <div class="container mx-auto p-8 bg-white rounded-lg shadow-lg">
@@ -36,7 +37,7 @@
                 <ul class="list-disc list-inside">
                     <li>Total investido: R$ {{valor_inicial}} </li>
                     <li>Na poupança, seu dinheiro renderia: R$ 1.097,18</li>
-                    {{taxaSelic}}
+                    {{valores_por_mes}}
                     <li>No Tesouro Selic, seu dinheiro renderia: R$ 2.069,57</li>
                 </ul>
                 <div class="flex items-center mt-4">
@@ -49,6 +50,38 @@
                 </ul>
             </div>
         </div>
+
+        <canvas id="myChart"></canvas>
     </div>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const values = [10, 20, 30, 40, 50,  ];
+        const incrementalList = [];
+
+          for (let i = 0; i < values.length; i++) {
+              incrementalList.push(i + 1);
+          }
+           	const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: incrementalList,
+                datasets: [{
+                    label: 'My Data',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    data: values
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
 </body>
 </html>
