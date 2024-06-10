@@ -24,7 +24,7 @@
                     </div>
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700" for="tempo_investimento">Quanto tempo deixaria seu dinheiro investido? (em meses) </label>
-                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="tempo_investimento" name="tempo_investimento" value="0">
+                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="number" id="tempo_investimento" name="tempo_investimento" value="0" max='240'>
                     </div>
                     <button class="bg-indigo-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-600" type="submit">Calcular</button>
                 </form>
@@ -37,7 +37,6 @@
                 <ul class="list-disc list-inside">
                     <li>Total investido: R$ {{valor_inicial}} </li>
                     <li>Na poupança, seu dinheiro renderia: R$ 1.097,18</li>
-                    {{valores_por_mes}}
                     <li>No Tesouro Selic, seu dinheiro renderia: R$ 2.069,57</li>
                 </ul>
                 <div class="flex items-center mt-4">
