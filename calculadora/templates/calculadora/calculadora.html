@@ -51,11 +51,11 @@
             </div>
         </div>
 
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart" style='width: 90%; height:100%'></canvas>
     </div>
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
-        const values = [10, 20, 30, 40, 50,  ];
+        const values = {{valores_por_mes}};
         const incrementalList = [];
 
           for (let i = 0; i < values.length; i++) {
