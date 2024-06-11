@@ -7,7 +7,7 @@ from .Utils.return_brazilian_selic_rate_from_api import return_selic_rate_from_l
 
 def calcular_investimento(request):
     numeroDeMesesInvestido = None
-    valor_taxa_selic_ao_ano = 11
+    valor_taxa_selic_ao_ano = (float(return_selic_rate_from_last_month()['valor']) - 0.10 or 0  )
     valor_inicial = 0
     porcentagem_rendimento_ao_ano = 11.5
     valor_rendimento_ao_ano = porcentagem_rendimento_ao_ano / 100
