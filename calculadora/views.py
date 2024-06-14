@@ -18,14 +18,12 @@ def calcular_investimento(request):
     if request.method == 'POST':
         if hasattr(request, 'form'):  # If using a form class
             form = request.form
-            print(form)
         else:  # If not using a form class
             valor_inicial = 0  + int(request.POST.get('valor_inicial'))
             tempo_investimento = int(request.POST.get('tempo_investimento'))
             numeroDeMesesInvestido = tempo_investimento # quantos meses kk 
 
             deposito_mensal =  float(request.POST.get('deposito_mensal'))
-            print('Valor inicial', valor_inicial)
 
 
     def formata_dois_decimais_e_converte_para_float(valor_numerico):
@@ -34,7 +32,6 @@ def calcular_investimento(request):
         return valor_numerico
 
     for contador_individual in range(1, (numeroDeMesesInvestido or 1) + 1):
-        print(contador_individual, valor_final )
         if valor_final < valor_inicial:
             valor_final = valor_inicial
 
