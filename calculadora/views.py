@@ -9,7 +9,7 @@ def calcular_investimento(request):
     numeroDeMesesInvestido = None
     valor_taxa_selic_ao_ano = (float(return_selic_rate_from_last_month()['valor']) - 0.10 or 0  )
     valor_inicial = 0
-    porcentagem_rendimento_ao_ano = 11.5
+    porcentagem_rendimento_ao_ano = valor_taxa_selic_ao_ano
     valor_rendimento_ao_ano = porcentagem_rendimento_ao_ano / 100
     valor_rendimento_ao_mes = valor_rendimento_ao_ano / 12
     valor_final = valor_inicial
