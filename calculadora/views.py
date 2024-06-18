@@ -31,7 +31,7 @@ def calcular_investimento(request):
         valor_numerico = float(valor_numerico)
         return valor_numerico
 
-    for contador_individual in range(1, (numeroDeMesesInvestido or 1) + 1):
+    for contador_individual in range(1, (numeroDeMesesInvestido or 0) + 1):
         if valor_final < valor_inicial:
             valor_final = valor_inicial
 
