@@ -20,8 +20,7 @@ def calcular_investimento(request):
             form = request.form
         else:  # If not using a form class
             valor_inicial = 0  + int(request.POST.get('valor_inicial'))
-            tempo_investimento = int(request.POST.get('tempo_investimento'))
-            numeroDeMesesInvestido = tempo_investimento # quantos meses kk 
+            numeroDeMesesInvestido = int(request.POST.get('tempo_investimento'))
 
             deposito_mensal =  float(request.POST.get('deposito_mensal'))
 
