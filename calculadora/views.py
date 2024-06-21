@@ -47,8 +47,8 @@ def calcular_investimento(request):
         'valor_rendimento_ao_ano': valor_rendimento_ao_ano,
         'valor_rendimento_ao_mes': valor_rendimento_ao_mes,
         'valor_juros_acumulado': formata_dois_decimais_e_converte_para_float(valor_final),
-        'valores_por_mes': lista_de_valores_por_mes,
         'numeroDeMesesInvestido' : numeroDeMesesInvestido,
         'taxaSelic' : return_selic_rate_from_last_month
     }
+    
     return render(request, 'calculadora/calculadora.html', contexto)
