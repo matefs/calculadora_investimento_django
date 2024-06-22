@@ -55,11 +55,12 @@
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
         const values = {{valores_por_mes}};
-        const incrementalList = [];
+        const incrementalList = [0];
 
           for (let i = 0; i < values.length; i++) {
               incrementalList.push(i + 1);
           }
+
            	const chart = new Chart(ctx, {
             type: 'bar',
             data: {
