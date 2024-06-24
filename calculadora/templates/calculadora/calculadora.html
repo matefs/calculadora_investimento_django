@@ -19,10 +19,6 @@
                         <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="valor_inicial" name="valor_inicial" value="0">
                     </div>
                     <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700" for="deposito_mensal">E por mês, quanto gostaria de depositar?</label>
-                        <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="deposito_mensal" name="deposito_mensal" value="0">
-                    </div>
-                    <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700" for="tempo_investimento">Quanto tempo deixaria seu dinheiro investido? (em meses) </label>
                         <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="number" id="tempo_investimento" name="tempo_investimento" value="0" max='240'>
                     </div>
@@ -55,7 +51,7 @@
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
         const values = {{valores_por_mes}};
-        const incrementalList = [0];
+        const incrementalList = [];
 
           for (let i = 0; i < values.length; i++) {
               incrementalList.push(i + 1);

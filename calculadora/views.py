@@ -22,8 +22,6 @@ def calcular_investimento(request):
             valor_inicial = 0  + int(request.POST.get('valor_inicial'))
             numeroDeMesesInvestido = int(request.POST.get('tempo_investimento'))
 
-            deposito_mensal =  float(request.POST.get('deposito_mensal'))
-
 
     def formata_dois_decimais_e_converte_para_float(valor_numerico):
         valor_numerico = "{:.2f}".format(valor_numerico)
